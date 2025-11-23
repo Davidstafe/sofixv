@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sofía Belén · Mis 15</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <!-- HERO / PORTADA -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="photo-placeholder" id="photoPreview">
+        <input id="photoInput" type="file" accept="image/*" />
+        <div class="photo-overlay">
+          <span class="small">Subí la foto de Sofía</span>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <h1 class="name">Sofía Belén <span class="last">Ruiz Moreno</span></h1>
+        <p class="tagline">Acompañame en una noche inolvidable</p>
+        <p class="date">22 de agosto de 2026 · 21:00 hs</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <h2>Falta muy poco</h2>
+    <div class="countdown">
+      <div class="unit"><span id="dias">00</span><small>Días</small></div>
+      <div class="unit"><span id="horas">00</span><small>Horas</small></div>
+      <div class="unit"><span id="minutos">00</span><small>Min</small></div>
+      <div class="unit"><span id="segundos">00</span><small>Seg</small></div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <main class="info">
+    <article class="card">
+      <h3>Ubicación</h3>
+      <p>Salón de Eventos Monumental — Santa Fe, Argentina</p>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/Salón+Monumental+Santa+Fe+Argentina">
+         Ver en Google Maps
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>Dress code</h3>
+      <p>Elegante</p>
+    </article>
+
+    <article class="card">
+      <h3>Confirmar asistencia</h3>
+      <p>Confirmá tu asistencia y, si pagaste la tarjetita, envía el comprobante al mail.</p>
+
+      <div class="confirm-row">
+        <a class="btn outline" id="confirmWhats" href="#" target="_blank">Confirmar por WhatsApp</a>
+
+        <div class="email-send">
+          <input id="mailInput" type="email" placeholder="Email para recibir comprobantes" />
+          <button class="btn" id="saveMail">Guardar</button>
+        </div>
+
+        <a id="mailtoBtn" class="btn" href="#">Enviar comprobante (abrir mail)</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Regalo / Tarjetita</h3>
+      <p>Podés enviar tu aporte por Mercado Pago:</p>
+
+      <div class="mp-row">
+        <div class="alias-box">
+          <label>Alias Mercado Pago</label>
+          <div class="alias">COBRE.BUTACA.NOVIO</div>
+        </div>
+
+        <div class="mp-actions">
+          <button class="btn outline" id="copyAlias">Copiar alias</button>
+          <a class="btn" id="openMP" target="_blank" rel="noopener" href="https://www.mercadopago.com.ar">Abrir Mercado Pago</a>
+        </div>
+      </div>
+
+      <p class="mp-note">Cuando tengas el comprobante, abrí tu mail usando "Enviar comprobante" y adjuntalo, o seguí las instrucciones del mail que guardes arriba.</p>
+    </article>
+
+    <article class="card">
+      <h3>Música</h3>
+      <p>Activa la música de la invitación si querés (la podés cambiar luego).</p>
+      <div class="music-controls">
+        <audio id="bgMusic" loop>
+          <source src="music/sample.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+        <button class="btn outline" id="playMusic">Play / Pause</button>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>Invitación de Sofía · 22/08/2026</p>
+  </footer>
+
+</body>
+</html>
