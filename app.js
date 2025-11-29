@@ -27,22 +27,7 @@ function startCountdown(){
 }
 startCountdown();
 
-// Photo upload preview (works in browser / GitHub Pages)
-const photoInput = document.getElementById("photoInput");
-const photoPreview = document.getElementById("photoPreview");
-photoInput.addEventListener("change", (e)=>{
-  const f = e.target.files[0];
-  if(!f) return;
-  const url = URL.createObjectURL(f);
-  // create img if not exists
-  let img = photoPreview.querySelector("img");
-  if(!img){
-    img = document.createElement("img");
-    photoPreview.appendChild(img);
-  }
-  img.src = url;
-  photoPreview.classList.add("has-photo");
-});
+
 
 // Mercado Pago alias copy
 document.getElementById("copyAlias").addEventListener("click", ()=>{
@@ -103,5 +88,25 @@ function updateMailto(){
   }
 }
 updateMailto();
+document.addEventListener("DOMContentLoaded", () => {
 
-// Si querés cambiar el alias o poner link directo a Mercado Pago, reemplaza los valores en el HTML o aquí.
+  // === COPIAR ALIAS ===
+  const copyBtn = document.getElementById("copyAlias");
+  const alias = "COBRE.BUTACA.NOVIO";
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(alias)
+        .then(() => {
+          copyBtn.textContent = "¡Copiado!";
+          setTimeout(() => {
+            copyBtn.textContent = "Copiar alias";
+          }, 2000);
+        })
+        .catch(() => {
+          alert("No se pudo copiar. Copialo manualmente.");
+        });
+    });
+  }
+
+});
