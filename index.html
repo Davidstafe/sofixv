@@ -33,13 +33,28 @@
     </div>
   </section>
 
+   
+
   <!-- INFO CARDS -->
   <main class="info">
+<!-- MÚSICA -->
+    <article class="card">
+      <h3>Música</h3>
+      <p>Tocá Play para musicalizar la invitación.</p>
 
+      <div class="music-controls">
+        <audio id="bgMusic" loop>
+          <source src="musica/tini.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+
+        <button class="btn outline" id="playMusic">▶ Play</button>
+      </div>
+    </article>
      <!-- FECHA -->
      <article class="card">
       <h3>Fecha</h3>
-      <p>Sabado 22 de Agosto  21 hs
+      <p>Sabado 22 de Agosto  21 hs</p>
     </article>
 
     <!-- FOTO -->
@@ -47,6 +62,7 @@
      <div class="card-img-wrapper">
      <img src="imagen/fotoSofi.jpeg" alt="Foto" class="card-img">
     </div>
+    </article>
  
 
     <!-- UBICACIÓN -->
@@ -64,9 +80,11 @@
       <article class="card">
   <h3>Tarjetita / Información de Pago</h3>
 
-  <p>Costo de la tarjeta: <strong>$55.000</strong></p>
+  <p>Costo de la tarjeta adultos: <strong>$55.000</strong></p>
+  <p>Costo de la tarjeta menores: <strong>$35.000</strong></p>
+  <p>Costo de la tarjeta trasnoche: <strong>$20.000</strong></p>
 
-  <p>Alias Mercado Pago:</p>
+  <p>Alias:</p>
   <div class="alias-box">
     <strong>COBRE.BUTACA.NOVIO</strong>
   </div>
@@ -78,26 +96,13 @@
      Enviar comprobante
   </a>
 </article>
-
-    <article class="card">
-      <h3>Música</h3>
-      <p>Activa la música de la invitación si querés (la podés cambiar luego).</p>
-      <div class="music-controls">
-        <audio id="bgMusic" loop>
-          <source src="music/sample.mp3" type="audio/mpeg">
-          Tu navegador no soporta audio.
-        </audio>
-        <button class="btn outline" id="playMusic">Play / Pause</button>
-      </div>
-    </article>
+ 
   </main>
 
   <footer class="footer">
     <p>Invitación de Sofía · 22/08/2026</p>
-    <footer class="footer">
+  
   <p>Hecho con  ♥ por<a href="https://davidstafe.github.io/Davidstafe/" target="_blank">David Web</a></p>
-</footer>
-
   </footer>
 
 </body>
