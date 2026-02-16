@@ -139,6 +139,7 @@ body {
 .card-img {
   width: 100%;
   border-radius: 12px;
+  background-image: url("img/foto.jpeg");
   display: block;
 }
 
